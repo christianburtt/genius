@@ -19,20 +19,20 @@ const Turn = (props) =>{
         let numClose = 0;
         const rightIndices = [0,0,0,0];
         const closeIndices = [...rightIndices];
-        const answerArray = [...props.answer];
+        // const answerArray = [...props.answer];
         event.preventDefault();
         for(let i=0; i<4; i++){
-            if(turnVals[i]===answerArray[i]){ 
+            if(turnVals[i]===props.answer[i]){ 
                 numRight++;
                 rightIndices[i]=1;
             }
         }
-        // console.log('Correct: '+numRight);
+        console.log('Correct: '+numRight);
         //separate loop for finding close ones
         for(let i=0;i<4; i++){
             if(rightIndices[i]===0){
                 for(let j=0;j<4;j++){
-                    if(turnVals[i]===answerArray[j] 
+                    if(turnVals[i]===props.answer[j] 
                         && closeIndices[j]===0
                         && rightIndices[j]===0){
                         numClose++;
@@ -41,7 +41,7 @@ const Turn = (props) =>{
                 }
             }
         }
-        // console.log('Close: '+numClose);
+        console.log('Close: '+numClose);
         props.onTurnSubmit({id:Math.random().toString(),response:[...turnVals], numRight: numRight, numClose:numClose});
         // console.log(answerArray);
         // updateVals(['red','red','red','red']);

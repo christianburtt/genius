@@ -1,0 +1,19 @@
+.dotbox{
+    width: 60px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.dot{
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+    margin: 10px; 
+}
+.dot-black{
+    background-color: black;
+}
+.dot-white{
+    background-color: white;
+}

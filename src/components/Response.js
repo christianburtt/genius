@@ -17,7 +17,7 @@ const Response = (props)=>{
                 <option value="blue">Blue</option>
                 <option value="yellow">Yellow</option>
                 <option value="purple">Purple</option>
-                <option value="orange">Orange</option>
+                <option value="#ff8b3c">Orange</option>
 
             </select>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Response.css';
 import './Turn.css';
+import Dotbox from './Dotbox';
 const PreviousTurn = (props) =>{
 
     return(
@@ -9,10 +10,7 @@ const PreviousTurn = (props) =>{
             <div className='icon' style={{backgroundColor:props.colors[1]}}></div>
             <div className='icon' style={{backgroundColor:props.colors[2]}}></div>
             <div className='icon' style={{backgroundColor:props.colors[3]}}></div>
-            <div>
-                <h4 className='green'>Correct: {props.numRight}</h4>
-                <h4 className='yellow'>Almost: {props.numClose}</h4>
-            </div>
+            <Dotbox key={Math.random()} numRight={props.numRight} numClose={props.numClose} />
         </li>
     )
 };
