@@ -16,7 +16,7 @@ const Game = () => {
     const [answer, setAnswer] = useState( () =>{
         const initialAnswer = [];
         for(let i=0; i<4; i++){
-            initialAnswer.push(COLORS[Math.floor(Math.random() * 4)]);
+            initialAnswer.push(COLORS[Math.floor(Math.random() * 6)]);
         }
         return initialAnswer;
     });

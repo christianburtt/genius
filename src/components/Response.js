@@ -4,7 +4,7 @@ const Response = (props)=>{
     const [responseColor, setResponseColor] = useState('red');
 
     const colorChangeHandler = (event)=>{
-        console.log('change to: '+event.target.value)
+        // console.log('change to: '+event.target.value)
         setResponseColor(event.target.value);
         props.onChangeColor(props.loc, event.target.value);
     }

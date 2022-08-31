@@ -5,12 +5,12 @@ const Turn = (props) =>{
     const [turnVals,updateVals] = useState(['red','red','red','red']);
     // const [colors,setColor] = useState('');
     const updateColors = (loc,val)=>{
-        console.log("in turn: update colors: "+loc+" "+val);
+        // console.log("in turn: update colors: "+loc+" "+val);
         updateVals(prev => {
             prev[loc] = val;
             return prev;
         })
-        console.log("statein turn: "+turnVals);
+        // console.log("statein turn: "+turnVals);
         // console.log(props.answer);
     }
     
@@ -28,6 +28,7 @@ const Turn = (props) =>{
             }
         }
         console.log('Correct: '+numRight);
+        console.log('right Indicies: '+rightIndices);
         //separate loop for finding close ones
         for(let i=0;i<4; i++){
             if(rightIndices[i]===0){
@@ -37,11 +38,13 @@ const Turn = (props) =>{
                         && rightIndices[j]===0){
                         numClose++;
                         closeIndices[j]=1;
+                        break;
                     }
                 }
             }
         }
         console.log('Close: '+numClose);
+        console.log('close indicies: '+closeIndices);
         props.onTurnSubmit({id:Math.random().toString(),response:[...turnVals], numRight: numRight, numClose:numClose});
         // console.log(answerArray);
         // updateVals(['red','red','red','red']);
