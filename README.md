@@ -1,7 +1,6 @@
-# Guess the Pattern Game
+# Guess the Pattern Game "Genius"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Simple React.js based board game for 1 player.
 ## How to play
 
 Within 8 guesses, you try to guess the color pattern of 4 out of 6 possibile colors. Basically the same as "Mastermind" board game
@@ -11,6 +10,3 @@ Download / clone the repository
 npm start for development
 
 npm build for production
-
-see live version here:
-https://guess.secondhandwebdesign.com
